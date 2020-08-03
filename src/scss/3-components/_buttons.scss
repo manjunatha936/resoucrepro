@@ -1,0 +1,93 @@
+.btn {
+  font-size: 18px;
+
+  &.btn-link {
+    color          : $link;
+    font-weight    : 400;
+    letter-spacing : 0.42px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $b;
+    }
+
+    .text-black {
+      color    : $b !important;
+      font-size: 18px;
+
+      @media (min-width:1280px) {
+        font-size: 20px;
+      }
+
+      &:hover,
+      &:focus {
+        color: $link !important
+      }
+    }
+  }
+
+  &.btn-primary {
+    width           : 100%;
+    border-radius   : 4px;
+    background-color: $link;
+    color           : $w;
+    font-weight     : 600;
+    letter-spacing  : 0.7px;
+    line-height     : 17px;
+    text-transform  : uppercase;
+    padding         : 16px 16px;
+    text-align      : center;
+    border          : 1px solid $w;
+
+    // background         : linear-gradient(to right, transparent 50%, $link 50%);
+    // background-size    : 200% 100%;
+    // background-position: right bottom;
+    transition: all 2s ease;
+
+    @include bp("desktop-1024") {
+      padding: 23px 18px;
+    }
+
+    &:hover,
+    &:focus {
+      border                   : 1px solid $link;
+      color                    : $link;
+      background-color         : $w;
+      // background-position   : left bottom;
+    }
+  }
+
+  &.footer-btn {
+    font-size       : 20px;
+    font-weight     : 400;
+    letter-spacing  : 0.42px;
+    border-radius   : 8px;
+    background-color: $link;
+    padding         : 16px 32px;
+    margin          : 20px 0;
+
+    // background         : linear-gradient(to right, transparent 50%, $link 50%);
+    // background-size    : 200% 100%;
+    // background-position: right bottom;
+    transition: all 2s ease;
+
+    @media (min-width:1280px) {
+      margin: 40px 0;
+    }
+
+    &:hover,
+    &:focus {
+      border                   : 1px solid $link;
+      color                    : $link;
+      background-color         : $w;
+      // background-position   : left bottom;
+    }
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}

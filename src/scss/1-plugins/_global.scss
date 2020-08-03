@@ -1,0 +1,77 @@
+main {
+  // opacity: 0;
+  // display: none;
+  transition: opacity 0.4s ease;
+
+  @media (max-width: 767px) {
+    // overflow-x: hidden;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+body {
+  font-family: "DINOT";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  // opacity: 0;
+  background: $primary-color;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+#scroll-container {
+  transform-style: preserve-3d;
+}
+
+// Screen Orenetation
+
+// overlay  landscape view code
+
+.modall {
+  display: none;
+
+  @media (min-width: 414px) and (max-width: 767px) and (orientation: landscape) {
+    /* some styles to position the modal at the center of the page */
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    z-index: 10;
+    // outline: 9999px solid rgba(0,0,0,.5);
+    height: 100vh;
+    z-index: 99999;
+    // display: block !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    @media (min-width: 414px) and (max-width: 767px) and (orientation: landscape) {
+      width: 200px;
+      height: 150px;
+      margin-bottom: 2%;
+    }
+  }
+}
+
+html {
+  @media (min-width: 414px) and (max-width: 767px) and (orientation: landscape) {
+    overflow: hidden;
+  }
+}
+
+.main-all-pages {
+  a {
+    text-decoration: underline !important;
+  }
+}

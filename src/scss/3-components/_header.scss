@@ -1,0 +1,534 @@
+// .nav-header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   // z-index   : 1500;
+//   z-index: 9999;
+//   padding: 12px 0 7px 0;
+//   transform: translate3d(0, 0, 0);
+//   transition: all 0.4s ease;
+//   background: transparent;
+
+//   .nav-logo {
+//     width: 116px;
+
+//     @include bp(tab) {
+//       padding: 3px 0;
+//       width: auto;
+//     }
+
+//     svg {
+//       width: 100px;
+
+//       @media (max-width: 767px) {
+//         width: 85px;
+//       }
+//     }
+//   }
+
+//   &.is-active,
+//   &.bg-ie {
+//     background-color: $w;
+//     box-shadow: 0px 1px 15px #dfdada;
+
+//     .nav-logo {
+//       path {
+//         fill: $primary-color !important;
+//       }
+
+//       ellipse {
+//         fill: $primary-color !important;
+//       }
+//     }
+
+//     .nav-toggle {
+//       path {
+//         stroke: $primary-color !important;
+//       }
+//     }
+
+//     .header-nav-link {
+//       &,
+//       &:hover {
+//         color: $b24;
+//       }
+
+//       svg {
+//         path {
+//           stroke: $b24;
+//         }
+//       }
+//     }
+//   }
+
+//   &.is-down {
+//     transform: translateY(-100%);
+//   }
+
+//   &.is-up {
+//     transform: translateY(0%);
+//   }
+
+//   @include bp("tab") {
+//     padding: 20px 0;
+//   }
+
+//   @include bp("desktop-1200") {
+//     padding: 30px 0;
+//   }
+
+//   .product-dropdown-list {
+//     background-color: $w;
+//     box-shadow: 0 2px 22px rgba(0, 0, 0, 0.08);
+//     width: 64px;
+//     border-radius: 7px;
+//     position: absolute;
+//     left: 0;
+//     top: 35px;
+//     padding: 0px 15px 0px 15px;
+//     // transform: translate(0, 30px);
+//     opacity: 0;
+//     margin-top: 0px;
+//     transition: all ease 0.4s;
+
+//     @include bp(tab) {
+//       margin-top: 20px;
+//     }
+
+//     &.is-open {
+//       // transform: translate(0, 0px);
+//       opacity: 1;
+//       margin-top: 0;
+//       transition: all ease 0.4s;
+
+//       @media (max-width: 767px) {
+//         max-height: 80px;
+//         margin-top: 5px;
+//       }
+//     }
+
+//     @include bp(tab) {
+//     }
+
+//     li {
+//       padding: 8px 0;
+
+//       @media (max-width: 767px) {
+//         padding: 10px 0;
+//         margin: 0;
+//       }
+
+//       &:not(:last-child) {
+//         border-bottom: 1px solid #f3f3f3;
+//       }
+
+//       a {
+//         color: $primary-black;
+//         // font-family: $fnt-roboto;
+
+//         &:hover {
+//           color: $primary-color;
+//         }
+//       }
+//     }
+
+//     @media (max-width: 767px) {
+//       position: relative;
+//       top: 0;
+//       box-shadow: none;
+//       transform: translateY(0px);
+//       max-height: 0;
+//     }
+//   }
+
+//   &.bg-blue-header {
+//     border-bottom: 1px solid $blue08;
+
+//     &.is-active.is-up,
+//     &.is-active {
+//       border-bottom: 1px solid transparent;
+//     }
+
+//     .nav-toggle span {
+//       background-color: $w;
+//     }
+
+//     .header-nav-link {
+//       &,
+//       &:hover {
+//         color: $w;
+//       }
+
+//       &:hover {
+//         &:after {
+//           transform: scaleX(1);
+//           color: $w;
+//         }
+//       }
+
+//       &.active {
+//         color: $w !important;
+//       }
+
+//       &.text-link {
+//         border: 1.5px solid $w;
+//       }
+//     }
+
+//     &.menu-active.is-active,
+//     &.is-active.is-up {
+//       .header-nav-link {
+//         &,
+//         &:hover {
+//           color: $primary-color;
+//         }
+
+//         &:hover {
+//           &:after {
+//             transform: scaleX(1);
+//             color: $primary-color;
+//           }
+//         }
+
+//         &.active {
+//           color: $primary-color !important;
+//         }
+
+//         &.text-link {
+//           border: 1.5px solid $primary-color;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .nav-toggle {
+//   path {
+//     transition: transform 1s ease;
+//   }
+
+//   &.is-open {
+//     #menubar1 {
+//       transform: translateX(50%);
+//     }
+
+//     #menubar3 {
+//       transform: translateX(-50%);
+//     }
+
+//     // path {
+//     //   fill: $primary-color;
+//     // }
+//   }
+// }
+
+// .nav-menu {
+//   @media (max-width: $tab - 1) {
+//     position: fixed;
+//     top: 70px;
+//     left: 0;
+//     right: 0;
+//     opacity: 0;
+//     width: 100%;
+//     padding: 10px 30px 30px 30px;
+//     height: 100vh;
+//     overflow: auto;
+//     pointer-events: none;
+//     background-color: $w;
+//     transition: opacity 0.4s ease;
+//   }
+
+//   &.active {
+//     opacity: 1;
+//     pointer-events: all;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 3rem 20px;
+//   }
+
+//   @media (max-width: 766px) {
+//     &.active {
+//       padding: 3rem 25px;
+//     }
+//   }
+
+//   display: flex;
+
+//   .left-end {
+//     @include bp("desktop-1024") {
+//       margin-right: 2rem;
+//     }
+
+//     @media (min-width: 1280px) {
+//       margin-right: 8rem;
+//     }
+
+//     @include bp("desktop-1366") {
+//       margin-right: 14rem;
+//     }
+
+//     @media (min-width: 1440px) {
+//       margin-right: 300px;
+//     }
+
+//     @media (min-width: 1536px) {
+//       margin-right: 305px;
+//     }
+//   }
+// }
+
+// .nav-list {
+//   @media (max-width: 767px) {
+//     margin: 0 0 30px 0;
+//   }
+
+//   @media (min-width: 576px) and (max-width: 767px) {
+//     // max-width: 510px;
+//     // margin   : 0 auto;
+//   }
+
+//   @include bp("tab") {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   li {
+//     margin: 0 0 18px 0;
+//     position: relative;
+
+//     @include bp("tab") {
+//       margin: 0 20px 0 0;
+//     }
+
+//     @include bp("desktop") {
+//       margin: 0 30px 0 0;
+//     }
+
+//     @include bp("desktop-1200") {
+//       margin: 0 40px 0 0;
+//     }
+
+//     &:last-child {
+//       margin: 0;
+//     }
+//   }
+// }
+
+// .header-nav-link {
+//   &,
+//   &:hover {
+//     position: relative;
+//     display: inline-block;
+//     color: $primary-color;
+//     // font-family: $fnt-roboto;
+//     font-size: 14px;
+//     line-height: 17px;
+//     font-weight: 400;
+//     letter-spacing: 1.14px;
+//     transition: transform 0.4s ease;
+
+//     // font-weight   : 600;
+//     @include bp("tab") {
+//       font-size: 12px;
+//       display: inline;
+//     }
+
+//     @include bp("desktop-1024") {
+//       font-size: 16px;
+//     }
+//   }
+
+//   &:active {
+//     font-weight: 500;
+//   }
+
+//   &:hover {
+//     color: $link;
+//     transition: transform 0.4s ease;
+//   }
+
+//   &.text-link {
+//     border-radius: 4px;
+//     border: 1.5px solid $b24;
+//     padding: 10px;
+//     background: linear-gradient(to right, $link 50%, transparent 50%);
+//     background-size: 200% 100%;
+//     background-position: right bottom;
+//     transition: all 2s ease;
+
+//     @include bp("tab") {
+//       padding: 10px;
+//       margin-left: 20px;
+//     }
+
+//     @include bp("desktop-1366") {
+//       padding: 12px 20px;
+//     }
+
+//     &:after {
+//       display: none;
+//     }
+
+//     &:hover {
+//       color: $w;
+//       border: 1px solid $link;
+//       background-position: left bottom;
+//     }
+//   }
+
+//   &:after {
+//     position: absolute;
+//     content: "";
+//     bottom: 0px;
+//     left: 0;
+//     width: 100%;
+//     height: 1.2px;
+//     border-radius: 2px;
+//     background-color: currentColor;
+//     transform: scaleX(0);
+//     transform-origin: left;
+//     transition: transform 0.4s ease;
+//   }
+
+//   &:hover {
+//     &:after {
+//       transform: scaleX(1);
+//       color: $link;
+//     }
+//   }
+
+//   &.active {
+//     color: $link !important;
+//   }
+
+//   &.partner-active {
+//     color: $w;
+//     font-weight: 700;
+//     font-size: 16px;
+//   }
+
+//   svg {
+//     margin-left: 5px;
+//   }
+
+//   &.sub-down-menu {
+//     &:hover {
+//       &:after {
+//         transform: scaleX(0) !important;
+//         background-color: transparent !important;
+//         width: 0 !important;
+//       }
+//     }
+//   }
+// }
+
+// .nav-toggle {
+//   height: 30px;
+//   width: 18px;
+//   fill: $w;
+//   margin-right: 15px;
+// }
+
+// .nav-toggle #menubar2 {
+//   transition: all 0.5s ease;
+//   width: 20px;
+// }
+
+// .nav-toggle #menubar3 {
+//   transition: all 0.5s ease;
+//   width: 14px;
+// }
+
+// .nav-toggle span {
+//   background-color: $b24;
+//   width: 25px;
+//   height: 3px;
+//   margin-bottom: 5px;
+//   border-radius: 30%;
+//   display: block;
+//   transition: all 0.5s ease;
+// }
+
+// .nav-toggle.is-open #menubar1 {
+//   transform: translateY(12px) rotate(45deg);
+//   transition: all 0.5s ease;
+//   width: 25px;
+// }
+
+// .nav-toggle.is-open #menubar2 {
+//   opacity: 0;
+//   transition: all 0.5s ease;
+//   visibility: hidden;
+// }
+
+// .nav-toggle.is-open #menubar3 {
+//   transition: all 0.5s ease;
+//   transform: translateY(-4px) rotate(-45deg);
+//   width: 25px;
+// }
+
+// .nav-header.bg-ie .nav-toggle span,
+// .nav-header.is-active .nav-toggle span {
+//   background-color: $b24 !important;
+// }
+
+// .nav-header {
+//   .nav-toggle span {
+//     // background-color: $w !important;
+//   }
+
+//   &.is-active {
+//     .nav-toggle span {
+//       background-color: $b24 !important;
+//     }
+//   }
+// }
+
+// .divider {
+//   position: relative;
+
+//   &:before {
+//     @include bp("desktop-1366") {
+//       position: absolute;
+//       content: "";
+//       bottom: 0px;
+//       right: -19px;
+//       height: 100%;
+//       width: 1.2px;
+//       background: rgba(36, 36, 36, 0.57);
+//     }
+//   }
+// }
+
+// .bg-blue-header {
+//   .divider {
+//     &:before {
+//       background: $w;
+//     }
+//   }
+// }
+
+// .bg-blue-header.is-active .divider:before {
+//   background: rgba(36, 36, 36, 0.57);
+// }
+
+// .nav-header.is-active .header-nav-link,
+// .nav-header.is-active .header-nav-link:hover,
+// .nav-header.is-active .header-nav-link:focus {
+//   color: $b24;
+// }
+
+// .nav-header.bg-blue-header.is-active .header-nav-link.text-link {
+//   border: 1.5px solid $b24;
+// }
+
+// bootstrap header override
+
+.navbar {
+  &--primary {
+    background: $primary-color;
+    border: none;
+  }
+}

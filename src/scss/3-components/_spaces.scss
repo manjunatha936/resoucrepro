@@ -1,0 +1,23 @@
+.max-width650 {
+  max-width: 450px;
+  @media (min-width: 768px) {
+    max-width: 650px;
+  }
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+  display: block;
+}

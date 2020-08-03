@@ -1,0 +1,19 @@
+mixin breadcrumbs(items,ref,last)
+    section.pb-40
+        .container
+            .row
+                .col-12
+                    .breadcrumb(data-aos="fade-down")
+                        ul.breadcrumb__list&attributes(attributes)
+                            each item in items
+                                li.breadcrumb__item
+                                    // if breadcrumb is single
+                                    if (items.length === 0)
+                                        span.breadcrumb__link= item
+                                    else
+                                        a(href=ref title=item).breadcrumb__link= item
+
+                            if last
+                                li.breadcrumb__item
+                                    span.breadcrumb__link-current= last
+                            else

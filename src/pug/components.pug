@@ -1,0 +1,25 @@
+doctype html
+html.components-page(lang="en" dir="ltr")
+  include ./base/head.pug
+  +head('Trukkin - Components')
+
+  //Orientation
+  //- include ./components/orientation-modal.pug
+  
+  body
+    include ./components/header.pug
+    +header("")
+    main
+      section.pt-5
+        .container
+          .row
+            .col-md-12
+              h1 Font varients
+              .fnt-varients.pt-3
+                span.fnt-md.mb-5.fnt-exlght Heading Extra light [fnt-exlght]
+                span.fnt-md.mb-5.fnt-reg Heading Extra light [fnt-reg]
+                span.fnt-md.mb-5.fnt-medium Heading light [fnt-medium]
+                span.fnt-md.mb-5.fnt-bld Heading light [fnt-bld]
+
+              h1.pt-3 Headings
+

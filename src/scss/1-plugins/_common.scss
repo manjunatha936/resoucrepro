@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+dl,
+ol,
+p,
+ul {
+  margin: 0;
+}
+
+.is-disabled {
+  pointer-events: none;
+  cursor        : none;
+}
+
+
+body {
+  overflow-x : hidden;
+  width      : 100%;
+  font-family: $fnt-roboto;
+}
+
+// main {
+//   overflow: hidden;
+// }
+
+main {
+  position        : relative;
+  z-index         : 2;
+  background      : $w;
+  height          : auto;
+  // margin-bottom: 500px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.ui.dropdown {
+  .dropdown.icon {
+    &::before {
+      content: url(/assets/img/partner/select-arrow.svg);
+    }
+  }
+}
+
+.pb-40 {
+  padding-bottom: 30px;
+
+  @include bp(tab) {
+    padding-bottom: 40px;
+  }
+}
+
+.py-55 {
+  padding-bottom: 30px;
+  padding-top   : 30px;
+
+  @include bp(tab) {
+    padding-bottom: 55px;
+    padding-top   : 55px;
+  }
+}
+
+.py-90 {
+  padding-top   : 40px;
+  padding-bottom: 40px;
+
+  @media(min-width: 1280px) {
+    padding-top   : 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.p-80 {
+  padding: 40px 20px !important;
+
+  @media(min-width: 768px) {
+    padding: 40px !important;
+  }
+
+  @media(min-width: 1280px) {
+    padding: 80px !important;
+  }
+}
+
+.p-100 {
+  padding: 10px 0;
+
+  @media(min-width: 1280px) {
+    padding: 10px 20px 20px 0px;
+  }
+
+  @media(min-width: 1366px) {
+    padding: 10px 100px 20px 0px;
+  }
+}
+
+.pl-50 {
+  @media(min-width: 1280px) {
+    padding-left: 100px;
+  }
+
+  @media(min-width: 1366px) {}
+}
+
+.pr-100 {
+  @media(min-width: 1280px) {
+    padding-right: 100px;
+  }
+
+  @media(min-width: 1366px) {}
+}
+
+.width-100 {
+  @media(min-width: 1280px) {
+    width: 100px;
+  }
+}
+
+.go-back-link {
+  display: inline;
+
+  span {
+    color         : $w08;
+    font-family   : $fnt-montserrat;
+    font-size     : 14px;
+    font-weight   : 600;
+    letter-spacing: 0.39px;
+    line-height   : 30px;
+    padding-left  : 0.5rem;
+    padding-right : 0.5rem;
+    display       : inline-block;
+    transition    : 0.5s all ease;
+
+    &:hover,
+    &:focus {
+      color     : $w;
+      transition: 0.5s all ease;
+    }
+  }
+
+  img {
+    width     : 25px;
+    height    : 25px;
+    margin-top: -6px;
+  }
+}
+
+.small-info {
+  color         : rgba(0, 0, 0, 0.5);
+  font-family   : $fnt-montserrat;
+  font-size     : 12px;
+  font-weight   : 400;
+  letter-spacing: 0.17px;
+  margin-top    : 18px;
+}
+
+.border-bottom-2 {
+  border-bottom: 2px solid $b;
+}

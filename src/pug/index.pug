@@ -1,0 +1,11 @@
+doctype html
+html.home-page(lang="en" dir="ltr")
+  include ./base/head.pug
+  +head('Resourcepro - Home')
+  
+  body
+    include ./components/header.pug
+    +header("")
+    main
+
+      include ./layouts/home/main.pug 
